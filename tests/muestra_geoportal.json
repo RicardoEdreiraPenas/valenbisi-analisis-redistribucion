@@ -1,0 +1,77 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": 902746,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.3716462894107889,
+     39.469213221319464
+    ]
+   },
+   "properties": {
+    "gid": 902746,
+    "name": "70_CALLE_COLON_ESQ_ALMIRANTE_ROGER_DE_LAURIA",
+    "number": 70,
+    "address": "Colón, 44",
+    "open": "T",
+    "available": 0,
+    "free": 0,
+    "total": 17,
+    "ticket": "F",
+    "updated_at": "17/09/2026 00:42:47",
+    "update_jcd": 1789481030000
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 902866,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.37886641388495107,
+     39.45032925434954
+    ]
+   },
+   "properties": {
+    "gid": 902866,
+    "name": "191_CTRA_MALILLA",
+    "number": 191,
+    "address": "Esparraguera - Cra. Malilla",
+    "open": "T",
+    "available": 13,
+    "free": 2,
+    "total": 15,
+    "ticket": "F",
+    "updated_at": "01/10/2026 19:51:28",
+    "update_jcd": 1790876553000
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 902697,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.39021443540491124,
+     39.4723713328859
+    ]
+   },
+   "properties": {
+    "gid": 902697,
+    "name": "021_JUAN_LLORENS_29",
+    "number": 21,
+    "address": "Juan Llorens - Literato Gabriel Miró",
+    "open": "T",
+    "available": 5,
+    "free": 11,
+    "total": 16,
+    "ticket": "T",
+    "updated_at": "01/10/2026 19:51:28",
+    "update_jcd": 1790877033000
+   }
+  }
+ ]
+}
