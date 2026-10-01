@@ -1,0 +1,50 @@
+name: Recolectar datos
+
+# Cada 15 minutos guarda el estado de las 273 estaciones en la rama "datos".
+# GitHub puede retrasar u omitir alguna ejecución programada; el análisis mide
+# la cobertura real de los datos antes de sacar conclusiones.
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: recolectar
+  cancel-in-progress: false
+
+jobs:
+  capturar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/checkout@v7
+        with:
+          ref: datos
+          path: almacen
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - run: python recolector/capturar.py almacen/datos
+
+      - name: Guardar en la rama datos
+        working-directory: almacen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add datos
+          git commit -q -m "Captura $(TZ=Europe/Madrid date '+%Y-%m-%d %H:%M')"
+          for intento in 1 2 3; do
+            git push -q origin HEAD:datos && exit 0
+            git pull -q --rebase origin datos
+          done
+          exit 1
