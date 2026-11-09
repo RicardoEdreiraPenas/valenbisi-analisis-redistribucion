@@ -1,0 +1,19 @@
+grupo,franja,estaciones,ocupacion_media
+equilibrada,00-06,240,41.0
+equilibrada,06-10,240,35.0
+equilibrada,10-14,240,31.0
+equilibrada,14-17,240,34.0
+equilibrada,17-21,240,34.0
+equilibrada,21-24,240,37.0
+tiende a llenarse,00-06,15,88.0
+tiende a llenarse,06-10,15,62.0
+tiende a llenarse,10-14,15,26.0
+tiende a llenarse,14-17,15,47.0
+tiende a llenarse,17-21,15,62.0
+tiende a llenarse,21-24,15,78.0
+tiende a vaciarse,00-06,17,2.0
+tiende a vaciarse,06-10,17,25.0
+tiende a vaciarse,10-14,17,57.0
+tiende a vaciarse,14-17,17,21.0
+tiende a vaciarse,17-21,17,16.0
+tiende a vaciarse,21-24,17,8.0
